@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/gamelogic.ts","./src/main.tsx","./src/types.ts","./src/vite-env.d.ts","./src/components/activeteambanner.tsx","./src/components/categorybar.tsx","./src/components/peekmascot.tsx","./src/components/questionmanager.tsx","./src/utils/parsequestionscsv.ts","./src/utils/questionstorage.ts"],"version":"5.8.3"}
