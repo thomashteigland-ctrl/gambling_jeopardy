@@ -100,16 +100,63 @@ textarea {
   transform: translateY(-50%);
   height: min(94vh, 880px);
   margin-left: -8px;
-  pointer-events: none;
   z-index: 20;
   line-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mascot-toggle {
+  display: flex;
+  flex-shrink: 0;
+  padding: 4px;
+  border-radius: 999px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  pointer-events: auto;
+  line-height: 1.2;
+}
+
+.mascot-toggle__option {
+  width: 2.5rem;
+  height: 2.25rem;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.mascot-toggle__option--thomas:not(.mascot-toggle__option--active) {
+  background: rgba(78, 205, 196, 0.2);
+}
+
+.mascot-toggle__option--johannes:not(.mascot-toggle__option--active) {
+  background: rgba(255, 107, 107, 0.2);
+}
+
+.mascot-toggle__option:hover:not(.mascot-toggle__option--active) {
+  filter: brightness(1.15);
+}
+
+.mascot-toggle__option--active {
+  background: var(--accent);
+  box-shadow: 0 0 0 2px rgba(244, 185, 66, 0.35);
 }
 
 .peek-mascot__img {
   display: block;
   height: 100%;
   width: auto;
+  flex: 1;
+  min-height: 0;
+  object-fit: contain;
   filter: drop-shadow(-4px 8px 20px rgba(0, 0, 0, 0.35));
+  pointer-events: none;
 }
 
 @media (max-width: 900px) {
